@@ -1,0 +1,24 @@
+<html>
+    <head>
+        <title> <%=title_page %> </title>
+        <%- include('../Includes/header.ejs') %>
+        <link   rel="stylesheet" href="/Style.css">
+    </head>
+    <body>
+        <%- include('../Includes/navigation.ejs') %>
+        <form method="POST" action="/postValue" class="FRM" >
+            <div>
+            <h2> Form </h2>
+            <label for="pid">Product Id: </label> 
+            <input type="text" name="pid" placeholder="productId"/><br/><br/><br/>
+            <label for="pname">Product Name: </label>
+            <input type="text" name="pname" placeholder="product name"/><br/><br/><br/>
+            <label for="price">Price: </label>
+            <input type="text" name="price" placeholder="product price"/><br/><br/><br/>
+            <button>Submit</button>
+        </form>
+    </div>
+    <footer>
+        <p class="footer-style"> copyright @ copy:node developer.com</p>
+    </footer>
+    </body>

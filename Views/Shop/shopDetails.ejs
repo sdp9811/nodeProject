@@ -1,0 +1,36 @@
+<html>
+    <head>
+        <title><%=title_shop %></title>
+        <link   rel="stylesheet" href="/Style.css">
+        <%- include('../Includes/header.ejs') %>
+    </head>
+    <body>
+      <%- include('../Includes/navigation.ejs') %>
+        
+                <div class ="container">
+                <%if(data.length>0){%>
+                    <div class="row">
+                        <%for(let val of data){%>
+                      <div class="col-md-4  col-sm-6 col-lg-4">  
+                        <div class="card text-dark bg-warning mb-3" style="max-width: 18rem; height: 100%;">
+                      <div class="card-body">
+                        <h5>Product Name <%=val.prodName %> </h5>
+                      <h5 class="card-title">Price <%=val.prodPrice %> </h5>
+                      <p class="card-subtitle mb-2 text-muted">product id <%=val.prodId %></p>
+                      <a href="/sprod/<%=val._id%>" class="btn btn-light">Details</a>
+                    </div>
+                  </div>
+                </div>
+                <%}%>
+                </div>
+            
+                  <%}else{%>
+                    <h1> data not found</h1>
+                    <%}%> 
+
+                </div>
+                <footer>
+                  <p class="footer-style"> copyright @ copy:node developer.com</p>
+              </footer>
+    </body>
+</html>
